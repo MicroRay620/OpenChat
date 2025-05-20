@@ -1,4 +1,8 @@
 @import "tailwindcss";
 :root {
     /* Status Colors */
+    --oc-user-status-on: #03be13;
+    --oc-user-status-off: grey; /*this is also the invisible color*/
+    --oc-user-status-dnd: rgb(214, 3, 3); /*Convert to hexcode*/
+    --oc-user-status-idle: #f5c71a;
 }
