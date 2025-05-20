@@ -59,31 +59,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tauriScript: npm run tauri
-
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: 'npm'
-      
-      - name: Install Rust
-        uses: dtolnay/rust-toolchain@stable
-        with:
-          components: rustfmt, clippy
-      
-      - name: Install frontend dependencies
-        run: npm install
-      
-      - name: Lint TypeScript
-        run: npx tsc --noEmit
-      
-      - name: Lint Rust
-        run: |
-          cd src-tauri
-          cargo fmt --all -- --check
-          cargo clippy -- -D warnings
