@@ -7,7 +7,11 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "tauri": "tauri"
+    "tauri": "tauri",
+    "fix:gleam": "cd gleam-src/frontend && gleam fix",
+    "build:gleam": "cd gleam-src/frontend && gleam build",
+    "tauri:dev": "npm run build:gleam && tauri dev",
+    "tauri:build": "npm run build:gleam && tauri build"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.7",
