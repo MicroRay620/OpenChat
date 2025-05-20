@@ -14,8 +14,8 @@
     "build:gleam:pro": "cd gleam-src/protocol && gleam build",
     "fix:gleam:all": "npm run fix:gleam:mid && npm run fix:gleam:pro",
     "build:gleam:all": "npm run build:gleam:mid && npm run build:gleam:pro",
-    "tauri:dev": "npm run build:gleam && tauri dev",
-    "tauri:build": "npm run build:gleam && tauri build"
+    "tauri:dev": "npm run build:gleam:all && tauri dev",
+    "tauri:build": "npm run build:gleam:all && tauri build"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.7",
