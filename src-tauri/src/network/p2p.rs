@@ -18,11 +18,12 @@ use std::sync::{Arc, Mutex};
 use std::time::Duration;
 use tokio::sync::mpsc;
 
-// #[derive(Serialize, Deserialize, Debug, Clone)]
-// pub enum MessageType {
-//     Text,
-//     Image,
-//     Video,
+#[derive(Serialize, Deserialize, Debug, Clone)]
+pub enum MessageType {
+    Text,
+    Image,
+    Video,
+}
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub enum ChatMessage {
