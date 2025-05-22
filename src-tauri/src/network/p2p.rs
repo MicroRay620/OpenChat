@@ -138,6 +138,6 @@ pub async fn join_channel(channel_id: String) -> Result<(), String> {
 
 #[tauri::command]
 pub async fn send_message(channel_id: String, content: String) -> Result<(), String> {
-    todo!("send a message to the channel");
+    todo!("send a message to the channel from a single user");
     Ok(())
 }
