@@ -1,0 +1,116 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import "./Footer.css";
+@import "tailwindcss";
+@import "../fonts/Monoki/Monoki.ttf";
+
+:root {
+    --header-font: "Open Sans", sans-serif;
+    --primary-font: "Lexend", sans-serif;
+    --secondary-font: Arial, sans-serif;
+    --tertiary-font: Helvetica, sans-serif;
+    --quaternary-font: "Roboto", sans-serif;
+    --quinary-font: "Consolas", monospace;
+    --senary-font: "Courier New", monospace;
+    --septenary-font: "Times New Roman", serif;
+    --octonary-font: "Georgia", serif;
+    --nonary-font: "Monoki", monospace;
+    --user-font: /* This variable is for the font that the user would input in customization */;
+
+    /*Theme Variables*/
+    --oled-bg-color: #000000;
+    --oled-txt-color: #ffffff;
+    --light-bg-color: #ffffff;
+    --light-txt-color: #000000;
+    --dark-bg-color: #b2beb5;
+    --dark-txt-color: #ffffff;
+    --user-bg-color: /* This variable is for the background color that the user would input in customization */;
+    --user-txt-color: /* This variable is for the text color that the user would input in customization */;
+
+    /*Location Variables*/
+    --left-location: left;
+    --right-location: right;
+    --center-location: center;
+    --centre-location: center;
+
+    /*Status Variables*/
+    --status-online: #03be13;
+    --status-offline: grey; /*This is also the invisible color*/
+    --status-dnd: #d60303;
+    --status-idle: #f5c71a;
+
+    /*Profile Picture*/
+    --default-pfp: ;
+    --user-pfp: ;
+}
+
+header {
+    font-family: var(--header-font);
+}
+
+
+#name-card {
+text-align: var(--center-location);
+}
+
+#navbar {
+display: flex;
+justify-content: var(--center-location);
+align-items: var(--center-location);
+}
+
+[data-font="option-one"] {
+    font-family: var(--primary-font);
+}
+
+[data-font="option-two"] {
+    font-family: var(--secondary-font);
+}
+
+[data-font="option-three"] {
+    font-family: var(--tertiary-font);
+}
+
+[data-font="option-four"] {
+    font-family: var(--quaternary-font);
+}
+
+[data-font="option-five"] {
+    font-family: var(--quinary-font);
+}
+
+[data-font="option-six"] {
+    font-family: var(--senary-font);
+}
+
+[data-font="option-seven"] {
+    font-family: var(--septenary-font);
+}
+
+[data-font="option-eight"] {
+    font-family: var(--octonary-font);
+}
+
+.user-indicator {
+    border-radius: 50%;
+}
+.user-status {
+    padding: 30px;
+    [data-status="online"] {
+        border-color: var(--status-online);
+    }
+
+    [data-status="idle"] {
+        border-color: var(--status-idle);
+    }
+
+    [data-status="dnd"] {
+        border-color: var(--status-dnd);
+    }
+
+    [data-status="offline"] {
+        border-color: var(--status-offline);
+    }
+}
+
