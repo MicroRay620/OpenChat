@@ -2,9 +2,9 @@ import "./Login.css";
 import React from "react";
 import { invoke } from "@tauri-apps/api/core";
 function Login() {
-    const username: &string = "username";
-    const email: &string = "email";
-    const password: &string = "password";
+    const username: string = "username";
+    const email: string = "email";
+    const password: string = "password";
     return (
         <div itemID={"user-login-container"}>
             <h3 itemID={"login-heading"} className={""}></h3>
