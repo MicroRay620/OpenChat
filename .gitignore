@@ -25,3 +25,4 @@ dist-ssr
 
 
 src-tauri/Cargo.lock
+node_modules/

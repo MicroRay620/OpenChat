@@ -1,116 +1,114 @@
-@charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import "./Footer.css";
 @import "tailwindcss";
-@import "../fonts/Monoki/Monoki.ttf";
 
 :root {
-    --header-font: "Open Sans", sans-serif;
-    --primary-font: "Lexend", sans-serif;
-    --secondary-font: Arial, sans-serif;
-    --tertiary-font: Helvetica, sans-serif;
-    --quaternary-font: "Roboto", sans-serif;
-    --quinary-font: "Consolas", monospace;
-    --senary-font: "Courier New", monospace;
-    --septenary-font: "Times New Roman", serif;
-    --octonary-font: "Georgia", serif;
-    --nonary-font: "Monoki", monospace;
-    --user-font: /* This variable is for the font that the user would input in customization */;
+    --cl-header-font: "Open Sans", sans-serif; 
+    --cl-primary-font: "Lexend", sans-serif; /*Option 1*/
+    --cl-secondary-font: Arial, sans-serif; /*Option 2*/
+    --cl-tertiary-font: Helvetica, sans-serif; /*Option 3*/
+    --cl-quaternary-font: "Roboto", sans-serif; /*Option 4*/
+    --cl-quinary-font: "Consolas", monospace; /*Option 5*/
+    --cl-senary-font: "Courier New", monospace; /*Option 6*/
+    --cl-septenary-font: "Times New Roman", serif;  /*Option 7*/
+    --cl-octonary-font: "Georgia", serif; /*Option 8*/
+    --cl-user-font: /* This variable is for the font that the user would input in customization */;
 
     /*Theme Variables*/
-    --oled-bg-color: #000000;
-    --oled-txt-color: #ffffff;
-    --light-bg-color: #ffffff;
-    --light-txt-color: #000000;
-    --dark-bg-color: #b2beb5;
-    --dark-txt-color: #ffffff;
-    --user-bg-color: /* This variable is for the background color that the user would input in customization */;
-    --user-txt-color: /* This variable is for the text color that the user would input in customization */;
+    --cl-oled-bg-color: #000000;
+    --cl-oled-txt-color: #ffffff;
+    --cl-light-bg-color: #ffffff;
+    --cl-light-txt-color: #000000;
+    --cl-dark-bg-color: #b2beb5;
+    --cl-dark-txt-color: #ffffff;
+    --cl-user-bg-color: /* This variable is for the background color that the user would input in customization */;
+    --cl-user-txt-color: /* This variable is for the text color that the user would input in customization */;
 
     /*Location Variables*/
-    --left-location: left;
-    --right-location: right;
-    --center-location: center;
-    --centre-location: center;
+    --cl-left-location: left;
+    --cl-right-location: right;
+    --cl-center-location: center;
+    --cl-centre-location: center;
 
     /*Status Variables*/
-    --status-online: #03be13;
-    --status-offline: grey; /*This is also the invisible color*/
-    --status-dnd: #d60303;
-    --status-idle: #f5c71a;
+    --cl-status-online: #03be13;
+    --cl-status-offline: grey; /*This is also the invisible color*/
+    --cl-status-dnd: #d60303;
+    --cl-status-idle: #f5c71a;
 
     /*Profile Picture*/
-    --default-pfp: ;
-    --user-pfp: ;
+    --cl-default-pfp: ;
+    --cl-user-pfp: ;
 }
 
 header {
-    font-family: var(--header-font);
+    font-family: var(--cl-header-font);
 }
 
 
 #name-card {
-text-align: var(--center-location);
+text-align: var(--cl-center-location);
 }
 
 #navbar {
 display: flex;
-justify-content: var(--center-location);
-align-items: var(--center-location);
+justify-content: var(--cl-center-location);
+align-items: var(--cl-center-location);
 }
 
 [data-font="option-one"] {
-    font-family: var(--primary-font);
+    font-family: var(--cl-primary-font);
 }
 
 [data-font="option-two"] {
-    font-family: var(--secondary-font);
+    font-family: var(--cl-secondary-font);
 }
 
 [data-font="option-three"] {
-    font-family: var(--tertiary-font);
+    font-family: var(--cl-tertiary-font);
 }
 
 [data-font="option-four"] {
-    font-family: var(--quaternary-font);
+    font-family: var(--cl-quaternary-font);
 }
 
 [data-font="option-five"] {
-    font-family: var(--quinary-font);
+    font-family: var(--cl-quinary-font);
 }
 
 [data-font="option-six"] {
-    font-family: var(--senary-font);
+    font-family: var(--cl-senary-font);
 }
 
 [data-font="option-seven"] {
-    font-family: var(--septenary-font);
+    font-family: var(--cl-septenary-font);
 }
 
 [data-font="option-eight"] {
-    font-family: var(--octonary-font);
+    font-family: var(--cl-octonary-font);
 }
 
 .user-indicator {
     border-radius: 50%;
+    .user-status {
+        padding: 30px;
+        [data-status="online"] {
+            border-color: var(--cl-status-online);
+        }
+
+        [data-status="idle"] {
+            border-color: var(--cl-status-idle);
+        }
+
+        [data-status="dnd"] {
+            border-color: var(--cl-status-dnd);
+        }
+
+        [data-status="offline"] {
+            border-color: var(--cl-status-offline);
+        }
+    }
 }
-.user-status {
-    padding: 30px;
-    [data-status="online"] {
-        border-color: var(--status-online);
-    }
 
-    [data-status="idle"] {
-        border-color: var(--status-idle);
-    }
-
-    [data-status="dnd"] {
-        border-color: var(--status-dnd);
-    }
-
-    [data-status="offline"] {
-        border-color: var(--status-offline);
-    }
-}
 

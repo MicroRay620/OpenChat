@@ -1,0 +1,21 @@
+main {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+aside {
+    text-align: left;
+    justify-content: left;
+    align-items: left;
+    display: flex;
+}
+
+.article-title {
+    font-size: 1.02em ;
+}
+.section-title {
+    font-size: 1.001em;
+    margin-top: 1em;
+}

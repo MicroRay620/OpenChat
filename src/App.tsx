@@ -7,9 +7,7 @@ function App() {
             <header className="App-header">
                 <Navbar />
             </header>
-            <main className="App-main">
-                Hello
-            </main>
+            {/* The page loaded will be here */}
             <Footer />
         </div>
     );
