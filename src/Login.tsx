@@ -1,25 +1,42 @@
-import "./Login.css";
+import "./styles/Login.css";
 import { useState } from "react";
-function Login() {
-    const [username, setState]: string = useState("name");
-    const [email, setState]: string = "email";
-    const [password, setState]: string = "password";
-    return (
-        <div itemID={"user-login-container"}>
-            <h3 itemID={"login-heading"} className={""}></h3>
-            <form itemID={"user-login-form"}>
-                <label htmlFor={"username"} className={"cls-user-label"}>Username</label>
-                <input type={"text"} itemID={"username"} className={"cls-user-input"} value={username}/>
+export default function Login() {
+    const [username, setUsername] = useState<string>("");
+    const [email, setEmail] = useState<string>("");
+    const [password, setPassword] = useState<string>("");
 
-                <label htmlFor={"email"} className={"cls-user-label"}>Email</label>
-                <input type={"email"} itemID={"email"} className={"cls-user-input"} value={email}/>
-                
-                <label htmlFor={"password"} className={"cls-user-label"}>Password</label>
-                <input type={"password"} itemID={"password"} className={"cls-user-input"} value={password}/>
-                <button type={"submit"} itemID={"login-button"} className={"cls-user-button"}>Register</button>
-            </form>
-            <span itemID={"login-option"}>Already have an account? <a href={"#"}>Login</a></span>
-        </div>
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        // Handle form submission here
+        console.log({ username, email, password });
+    };
+
+    return (
+        <>
+            <br/>
+            <div id={"user-login-container"}>
+                <h3 id={"login-heading"}>Register</h3>
+                {/*
+                * Make into a table form
+                */}
+                <form id={"user-login-form"} onSubmit={handleSubmit}>
+                    <label htmlFor={"username"} className={"cls-user-label"}>Username</label> &nbsp;
+                    <input type={"text"} id={"username"} className={"cls-user-input"} value={username} onChange={(e) => setUsername(e.target.value)}/>
+                    <br/>
+                    {/*
+                        * The <br/> are temporary, they will be changed for divs 
+                    */}
+                    <label htmlFor={"email"} className={"cls-user-label"}>Email</label> &nbsp;
+                    <input type={"email"} id={"email"} className={"cls-user-input"} value={email} onChange={(e) => setEmail(e.target.value)}/>
+                    <br/>
+                    <label htmlFor={"password"} className={"cls-user-label"}>Password</label> &nbsp;
+                    <input type={"password"} id={"password"} className={"cls-user-input"} value={password} onChange={(e) => setPassword(e.target.value)}/>
+                    <br/>
+                    <button type={"submit"} id={"login-button"} className={"cls-user-button hover:text-blue-600"}>Register</button>
+                </form>
+                <span id={"login-option"}>Already have an account? <a href={"#"}>Login</a></span>
+            </div>
+        </>
+       
     );
 }
-export default  Login();

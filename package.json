@@ -18,13 +18,16 @@
     "tauri:build": "npm run build:gleam:all && tauri build"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.4",
     "@reduxjs/toolkit": "^2.8.2",
     "@tailwindcss/vite": "^4.1.7",
-    "@tauri-apps/api": "^2",
+    "@tauri-apps/api": "^2.5.0",
     "@tauri-apps/plugin-opener": "^2",
     "postcss": "^8.5.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.6.2",
     "tailwindcss": "^4.1.7"
   },
   "devDependencies": {

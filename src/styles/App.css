@@ -15,7 +15,7 @@
     --cl-octonary-font: "Georgia", serif; /*Option 8*/
     --cl-user-font: /* This variable is for the font that the user would input in customization */;
 
-    /*Theme Variables*/
+    /* Theme Variables */
     --cl-oled-bg-color: #000000;
     --cl-oled-txt-color: #ffffff;
     --cl-light-bg-color: #ffffff;
@@ -46,16 +46,39 @@ header {
     font-family: var(--cl-header-font);
 }
 
+svg {
+    width: 3em;
+    height: 3em;
+}
+
+/*
+    IDs
+    * The ids are for specifics items
+    * These are structured #cl-app-{PageName}-{SpecificElement}
+*/
 
 #name-card {
-text-align: var(--cl-center-location);
+    text-align: var(--cl-center-location);
 }
 
-#navbar {
-display: flex;
-justify-content: var(--cl-center-location);
-align-items: var(--cl-center-location);
+#app-main-navbar {
+    display: flex;
+    justify-content: var(--cl-center-location);
+    align-items: var(--cl-center-location);
 }
+
+#app-main-nav-list {
+    display: flex;
+}
+
+.nav-link {
+    text-align: center;
+}
+
+.nav-span-text {
+    text-align: center;
+}
+
 
 [data-font="option-one"] {
     font-family: var(--cl-primary-font);
@@ -88,27 +111,35 @@ align-items: var(--cl-center-location);
 [data-font="option-eight"] {
     font-family: var(--cl-octonary-font);
 }
-
+/*
+* The user idicator is used to indicate whether a user is: 
+* away (idle),
+* offline, 
+* online, or 
+* not recieving the notification
+*/
 .user-indicator {
     border-radius: 50%;
-    .user-status {
-        padding: 30px;
-        [data-status="online"] {
-            border-color: var(--cl-status-online);
-        }
-
-        [data-status="idle"] {
-            border-color: var(--cl-status-idle);
-        }
-
-        [data-status="dnd"] {
-            border-color: var(--cl-status-dnd);
-        }
-
-        [data-status="offline"] {
-            border-color: var(--cl-status-offline);
-        }
-    }
+}
+.user-indicator .user-status {
+    padding: 30px;
+}
+.user-indicator .user-status [data-status="online"] {
+    border-color: var(--cl-status-online);
 }
 
+.user-indicator .user-status [data-status="idle"] {
+    border-color: var(--cl-status-idle);
+}
 
+.user-indicator .user-status [data-status="dnd"] {
+    border-color: var(--cl-status-dnd);
+}
+
+.user-indicator .user-status [data-status="offline"] {
+    border-color: var(--cl-status-offline);
+}
+
+.text-center {
+    text-align: center;
+}
