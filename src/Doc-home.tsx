@@ -1,8 +1,8 @@
 export default function DocHome() {
     return (
         <>
-            <div id={"app-docs-home"}>
-                Test
+            <div id={"cl-main-docs-home"}>
+                <h1>THIS PAGE IS UNDER CONSTRUCTION</h1>
             </div>
         </>
     )
