@@ -49,7 +49,6 @@ export default function Home() {
                             <span id={"cl-main-oos-text-user-privacy-goal-text"}>
                                 With the encryption it also enables us to protect and value your privacy as a user more than if 
                                 it was unencrypted and unsecure.<br />The decryption keys are stored in secure, private, and heavily guarded on the servers and one that's encrypted on your system.
-                            
                             </span>
                         </article>
                     </section>
