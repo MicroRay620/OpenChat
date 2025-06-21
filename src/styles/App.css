@@ -112,11 +112,12 @@ svg {
     font-family: var(--cl-octonary-font);
 }
 /*
-* The user idicator is used to indicate whether a user is: 
-* away (idle),
-* offline, 
-* online, or 
-* not recieving the notification
+    * The user idicator is used to indicate whether a user is
+    away (idle), offline, online, or not recieving the notification.
+    * 
+    * The user indicator exists so the circle radius for what the indicator has is defined.
+    * The user-status is for the padding amount the indicator has.
+    * The data-status is fining the color of the border for the user's status
 */
 .user-indicator {
     border-radius: 50%;
@@ -139,7 +140,9 @@ svg {
 .user-indicator .user-status [data-status="offline"] {
     border-color: var(--cl-status-offline);
 }
-
+/*
+* Tailwind doesn't have a text align css command. So this exists to allow ONLY text to be centered.
+*/
 .text-center {
     text-align: center;
 }
